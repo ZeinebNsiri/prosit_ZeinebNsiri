@@ -66,5 +66,25 @@ public class Main {
         hashSet.displayDepartement();
 
 
+        AffectationHashMap affectationHashMap = new AffectationHashMap();
+        affectationHashMap.ajouterEmployeDepartement(emp1,dep1);
+        affectationHashMap.ajouterEmployeDepartement(emp2,dep2);
+        //affectationHashMap.ajouterEmployeDepartement(employe2,dep1);
+        affectationHashMap.ajouterEmployeDepartement(emp3,dep4);
+
+        affectationHashMap.afficherEmployesEtDepartements();
+
+        System.out.println("recherche emp par emp : " + affectationHashMap.rechercherEmploye(emp1));
+        System.out.println("recherche emp par dep : " + affectationHashMap.rechercherDepartement(dep1));
+
+        affectationHashMap.afficherEmployes();
+        affectationHashMap.afficherDepartements();
+
+        System.out.println(affectationHashMap.trierMap());
+
+        affectationHashMap.supprimerEmploye(emp1);
+        affectationHashMap.supprimerEmployeEtDepartement(emp2,dep2);
+        affectationHashMap.afficherEmployesEtDepartements();
+
     }
 }
